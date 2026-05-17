@@ -1,0 +1,124 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font", "JetBrains Mono", monospace;
+    font-size: 11px;
+    font-weight: 500;
+    min-height: 0;
+}
+
+/* ── Bar window (unified frosted glass strip) ─────────────── */
+window#waybar {
+    background: rgba(20, 16, 14, 0.68);
+    border: 1px solid rgba(252, 232, 200, 0.10);
+    border-radius: 10px;
+    color: #fce8c8;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
+}
+
+.modules-left  { padding: 0 6px 0 4px; }
+.modules-right { padding: 0 0 0 4px; }
+
+/* ── Workspaces ───────────────────────────────────────────── */
+#workspaces {
+    margin: 0 2px;
+}
+
+#workspaces button {
+    color: rgba(252, 232, 200, 0.40);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 9px;
+    margin: 4px 1px;
+    border-radius: 5px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    transition: all 0.18s ease;
+}
+
+#workspaces button.active {
+    color: #1a1410;
+    background: #f08a3c;
+    border-radius: 5px;
+}
+
+#workspaces button:hover {
+    color: rgba(252, 232, 200, 0.85);
+    background: rgba(252, 232, 200, 0.10);
+    box-shadow: none;
+}
+
+#workspaces button.urgent {
+    background: #e85d3a;
+    color: #fce8c8;
+}
+
+/* ── Separator ────────────────────────────────────────────── */
+#custom-sep {
+    background: rgba(252, 232, 200, 0.12);
+    min-width: 1px;
+    margin: 8px 6px;
+}
+
+/* ── Window title ─────────────────────────────────────────── */
+#window {
+    color: rgba(252, 232, 200, 0.60);
+    font-weight: 400;
+    margin: 0 4px;
+}
+
+/* ── Clock (center) ───────────────────────────────────────── */
+#clock {
+    color: #fce8c8;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+}
+
+/* ── Right metrics ────────────────────────────────────────── */
+#cpu,
+#memory,
+#custom-gpu,
+#network,
+#pulseaudio,
+#bluetooth {
+    color: rgba(252, 232, 200, 0.78);
+    margin: 0 5px;
+}
+
+#tray {
+    margin: 0 2px 0 4px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#network.disconnected { color: #e85d3a; }
+#pulseaudio.muted     { opacity: 0.40; }
+
+/* ── Apps button (far right, accented) ───────────────────── */
+#custom-apps {
+    color: #f08a3c;
+    background: rgba(240, 138, 60, 0.14);
+    border-radius: 7px;
+    border: 1px solid rgba(240, 138, 60, 0.26);
+    font-size: 15px;
+    padding: 0 11px;
+    margin: 3px 8px 3px 4px;
+    transition: background 0.18s ease;
+}
+
+#custom-apps:hover {
+    background: rgba(240, 138, 60, 0.28);
+}
+
+/* ── Tooltips ─────────────────────────────────────────────── */
+tooltip {
+    background: rgba(20, 16, 14, 0.92);
+    border: 1px solid rgba(252, 232, 200, 0.15);
+    border-radius: 8px;
+    color: #fce8c8;
+    font-size: 11px;
+}

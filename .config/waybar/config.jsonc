@@ -63,10 +63,13 @@
     },
 
     "custom/gpu": {
+        // gpu.sh prints JSON: bar text (GPU load + temp) and a tooltip
+        // with the main system temperatures (CPU, GPU, SSD, RAM, chipset)
         "exec": "~/.config/waybar/scripts/gpu.sh",
+        "return-type": "json",
         "interval": 2,
         "format": "{}",
-        "tooltip": false
+        "tooltip": true
     },
 
     "network": {
